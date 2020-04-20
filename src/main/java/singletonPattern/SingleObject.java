@@ -5,14 +5,17 @@ public class SingleObject {
 
     //make the constructor private so that this class cannot be
     //instantiated
-    private SingleObject(){}
+    private SingleObject(){
+        // example -> connection with DB, only ONCE
+    }
 
     //Get the only object available
     public static SingleObject getInstance(){
         if(instance == null) {
              instance = new SingleObject();
         }
-        //rteutn the same object from memory -> create object only ONE
+        //returns the same object from memory -> create object only ONCE
+
         return instance;
     }
 
